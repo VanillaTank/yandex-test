@@ -2,18 +2,17 @@
 :root {
     --accent-font: 'Merriweather', serif;
     --basic-font: 'Golos Text', sans-serif;
-    --color-gray: #313131;
-    --color-light-gray: #D0D0D0;
+    --color-beige: #E9DED4;
+    --color-blue: #3057A2;
     --color-dark: #1F1F1F;
-    --color-yellow: #FBCE51;
-    --color-gray-light: #D6D6D6;
+    --color-gray: #313131;
+    --color-gray-light: #D0D0D0;
     --color-red: #F54932;
     --color-white: #ffffff;
-    --color-blue: #3057A2;
-    --color-beige: #E9DED4;
+    --color-yellow: #FBCE51;
 }
 
-/* Утилити классы и сброс дефолтных*/
+/* Утилити классы и сброс дефолтных */
 *,
 *::before,
 *::after {
@@ -90,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
+/* ---------- header ----------- */
 .header {
     width: 100%;
     height: 100vh;
@@ -138,7 +137,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-
 .header__btn-link {
     text-decoration: none;
 }
@@ -146,9 +144,9 @@ h1, h2, h3, h4, h5, h6 {
 .header__btn-link + .header__btn-link {
     margin-left: 12px;
 }
+/* ---------- конец header ----------- */
 
-
-
+/* ---------- Секция Tурнир ----------- */
 .support-competition {
     margin: 80px 0 64px;
     display: flex;
@@ -170,7 +168,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-
 .about-competition {
     display: flex;
     gap: 44px;
@@ -178,15 +175,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-competition__img-wrap {
-    max-width: 475px;
-    width: 100%;
     position: relative;
+    max-width: 472px;
+    width: 100%;
 }
 
 .about-competition__img {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: -30px;
+    left: -30px;
 }
 
 .about-competition__text {
@@ -204,20 +201,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-competition__info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content 1fr;
     margin-top: 60px;
 }
 
 .about-competition__info-title,
 .about-competition__info-text {
     font-size: 20px;
-    padding: 16px 0;
+    padding: 15px 0;
     line-height: 1.2;
+    border-bottom: 2px solid var(--color-gray-light);
 }
 
 .about-competition__info-title {
-    border-right: 2px solid var(--color-light-gray);
-    padding-right: 16px;
+    border-right: 2px solid var(--color-gray-light);
+    padding-right: 20px;
 }
 
 .about-competition__info-text {
@@ -225,9 +223,29 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 16px;
 }
 
-.about-competition__info-title:not(:last-child),
-.about-competition__info-text:not(:last-child) {
-    border-bottom: 2px solid var(--color-light-gray);
+.about-competition__info :nth-child(-n+2) {
+    padding-top: 0;
+}
+
+.about-competition__info :nth-last-child(-n+2) {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.about-competition__info-text--thrt {
+    position: relative;
+    margin-right: 7px;
+    display: inline-block;
+}
+
+.about-competition__info-text--thrt::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-red);
+    top: 13px;
+    left: -3px;
 }
 
 .about-competition__comment {
@@ -236,7 +254,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     font-size: 20px;
 }
+/* ---------- конец Секция Tурнир ----------- */
 
+/* ---------- footer ----------- */
 .footer {
     background-color: var(--color-beige);
     padding: 40px;
