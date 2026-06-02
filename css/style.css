@@ -12,6 +12,9 @@
     --color-yellow: #FBCE51;
 }
 
+/* todo .section должен нормально регулировать отступы */
+/* todo сделать плавный скролл */
+
 /* Утилити классы и сброс дефолтных */
 *,
 *::before,
@@ -28,6 +31,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     font-size: 100%;
     font-weight: normal;
+}
+
+li {
+    list-style: none;
 }
 
 .container {
@@ -171,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-competition {
     display: flex;
     gap: 44px;
-    margin-bottom: 165px;
+    margin-bottom: 200px;
 }
 
 .about-competition__img-wrap {
@@ -255,6 +262,160 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
 }
 /* ---------- конец Секция Tурнир ----------- */
+
+/* ---------- Секция Этапы преображения Васюков ----------- */
+.changing {
+    margin-bottom: 200px;
+}
+.changing__title {
+    margin-bottom: 54px;
+    position: relative;
+    max-width: 675px;
+    width: 100%;
+}
+.changing__title-text {
+    font-family: var(--accent-font), serif;
+    font-size: 54px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.changing__sub-title {
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--color-blue);
+    position: absolute;
+    max-width: 250px;
+    width: 100%;
+    top: 71px;
+    left: 300px;
+}
+
+.changing__steps-list {
+    display: grid;
+    gap: 20px;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-template-areas: "a b c"
+                         "d e c"
+                         "f g g";
+    position: relative;
+}
+/* todo переделать разметку */
+.test {
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+}
+.changing__steps-list::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.changing__steps-list-item {
+    display: flex;
+    background-color: var(--color-beige);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    align-items: flex-start
+}
+
+.changing__steps-list-item:nth-child(1) {
+    background-image: url('/img/change-item-bg-1.jpg');
+    grid-area: a;
+}
+
+.changing__steps-list-item:nth-child(2) {
+    background-image: url('/img/change-item-bg-2.jpg');
+    grid-area: b;
+}
+
+.changing__steps-list-item:nth-child(3) {
+    background-image: url('/img/change-item-bg-3.jpg');
+    grid-area: c;
+}
+
+.changing__steps-list-item:nth-child(4) {
+    background-image: url('/img/change-item-bg-4.jpg');
+    grid-area: d;
+}
+
+.changing__steps-list-item:nth-child(5) {
+    background-image: url('/img/change-item-bg-5.jpg');
+    grid-area: e;
+}
+
+.changing__steps-list-item:nth-child(6) {
+    background-image: url('/img/change-item-bg-6.jpg');
+    grid-area: f;
+}
+
+.changing__steps-list-item:nth-child(7) {
+    background-image: url('/img/change-item-bg-7.jpg');
+    grid-area: g;
+}
+
+.steps-list-item__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    margin-right: 16px;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.steps-list__item__text {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.steps-list__item__text--short {
+    max-width: 410px;
+    width: 100%;
+}
+
+/* ---------- конец Этапы преображения Васюков ----------- */
+
+
+/* ---------- Участники турнира ----------- */
+.gamers {
+    margin-bottom: 140px;
+}
+
+.gamers__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gamers__header-title {
+    font-family: var(--accent-font), serif;
+    font-size: 54px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.gamers__card-name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.gamers__card-about {
+    font-size: 20px;
+    line-height: 1.2;
+    opacity: .6;
+}
+
+/* ---------- конец Участники турнира ----------- */
+
 
 /* ---------- footer ----------- */
 .footer {
