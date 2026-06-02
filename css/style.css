@@ -1,14 +1,16 @@
 /* Переменные */
 :root {
+    --accent-font: 'Merriweather', serif;
+    --basic-font: 'Golos Text', sans-serif;
     --color-gray: #313131;
+    --color-light-gray: #D0D0D0;
     --color-dark: #1F1F1F;
     --color-yellow: #FBCE51;
     --color-gray-light: #D6D6D6;
-    --accent-font: 'Merriweather', serif;
-    --basic-font: 'Golos Text', sans-serif;
     --color-red: #F54932;
     --color-white: #ffffff;
     --color-blue: #3057A2;
+    --color-beige: #E9DED4;
 }
 
 /* Утилити классы и сброс дефолтных*/
@@ -198,4 +200,44 @@ h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
     color: var(--color-red);
     font-weight: bold;
+}
+
+.about-competition__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 60px;
+}
+
+.about-competition__info-title,
+.about-competition__info-text {
+    font-size: 20px;
+    padding: 16px 0;
+    line-height: 1.2;
+}
+
+.about-competition__info-title {
+    border-right: 2px solid var(--color-light-gray);
+    padding-right: 16px;
+}
+
+.about-competition__info-text {
+    font-weight: 600;
+    padding-left: 16px;
+}
+
+.about-competition__info-title:not(:last-child),
+.about-competition__info-text:not(:last-child) {
+    border-bottom: 2px solid var(--color-light-gray);
+}
+
+.about-competition__comment {
+    margin-top: 48px;
+    color: var(--color-blue);
+    line-height: 1.2;
+    font-size: 20px;
+}
+
+.footer {
+    background-color: var(--color-beige);
+    padding: 40px;
 }
