@@ -1,0 +1,201 @@
+/* Переменные */
+:root {
+    --color-gray: #313131;
+    --color-dark: #1F1F1F;
+    --color-yellow: #FBCE51;
+    --color-gray-light: #D6D6D6;
+    --accent-font: 'Merriweather', serif;
+    --basic-font: 'Golos Text', sans-serif;
+    --color-red: #F54932;
+    --color-white: #ffffff;
+    --color-blue: #3057A2;
+}
+
+/* Утилити классы и сброс дефолтных*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--basic-font), sans-serif;
+    color: var(--color-gray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.btn {
+    border: none;
+    background: none;
+    font-size: 16px;
+    outline: none;
+    /* Отключаем браузерные эффекты для кнопки (например, тень в Safari) */
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 14px 49px;
+    border-radius: 66px;
+    max-width: 263px;
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.btn :hover,
+.btn :focus,
+.btn :active {
+    background: none;
+    outline: none;
+}
+
+.btn :disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+.accent-btn {
+    color: var(--color-white);
+    background-color: var(--color-dark);
+    border: 2px solid var(--color-dark);
+}
+
+.accent-btn:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-dark);
+    border-color: var(--color-yellow);
+}
+
+.default-btn {
+    color: var(--color-dark);
+    background-color: transparent;
+    border: 2px solid var(--color-dark);
+}
+
+.default-btn:hover {
+    color: var(--color-white);
+    background-color: var(--color-dark);
+}
+
+
+
+.header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-bg {
+    background-color: #E9DED4;
+    background-image: url("../img/header-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+.header__logo-wrp {
+    margin-top: 26px;
+    margin-bottom: 62px;
+}
+
+.header__content {
+    width: 542px;
+}
+
+.header__title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.header__title-part {
+    font-family: var(--accent-font), serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.header__subtitle {
+    font-size: 18px;
+    margin-top: 26px;
+    margin-bottom: 40px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+
+.header__btn-link {
+    text-decoration: none;
+}
+
+.header__btn-link + .header__btn-link {
+    margin-left: 12px;
+}
+
+
+
+.support-competition {
+    margin: 80px 0 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 64px;
+}
+
+.support-competition__text {
+    text-transform: uppercase;
+    font-family: var(--accent-font), serif;
+    font-size: 36px;
+    line-height: 1.36;
+}
+
+.support-competition__text--accent {
+    font-family: inherit;
+    color: var(--color-red);
+    font-weight: bold;
+}
+
+
+.about-competition {
+    display: flex;
+    gap: 44px;
+    margin-bottom: 165px;
+}
+
+.about-competition__img-wrap {
+    max-width: 475px;
+    width: 100%;
+    position: relative;
+}
+
+.about-competition__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.about-competition__text {
+    text-transform: uppercase;
+    font-family: var(--accent-font), serif;
+    font-size: 36px;
+    line-height: 1.36;
+}
+
+.about-competition__text--accent {
+    font-family: inherit;
+    color: var(--color-red);
+    font-weight: bold;
+}
