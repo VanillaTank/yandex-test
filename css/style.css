@@ -445,6 +445,8 @@ li {
 
 .slider-count-wrap {
     margin: 0 14px;
+    min-width: 50px;
+    text-align: center;
 }
 
 .slider-count-devider,
@@ -452,7 +454,10 @@ li {
     opacity: .6;
 }
 
-/* todo скорее всего временно */
+.gamers__list-wrap {
+    overflow: hidden;
+}
+
 .gamers__list {
     display: flex;
     margin-top: 60px;
