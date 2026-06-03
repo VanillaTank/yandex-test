@@ -122,7 +122,7 @@ li {
     border-radius: 50%;
     background-color: var(--color-gray);
     background-position: center;
-    background-image: url("/img/arrow.svg");
+    background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     width: 44px;
     height: 44px;
@@ -367,37 +367,37 @@ li {
 }
 
 .changing__steps-list-item:nth-child(1) {
-    background-image: url('/img/change-item-bg-1.jpg');
+    background-image: url('../img/change-item-bg-1.jpg');
     grid-area: a;
 }
 
 .changing__steps-list-item:nth-child(2) {
-    background-image: url('/img/change-item-bg-2.jpg');
+    background-image: url('../img/change-item-bg-2.jpg');
     grid-area: b;
 }
 
 .changing__steps-list-item:nth-child(3) {
-    background-image: url('/img/change-item-bg-3.jpg');
+    background-image: url('../img/change-item-bg-3.jpg');
     grid-area: c;
 }
 
 .changing__steps-list-item:nth-child(4) {
-    background-image: url('/img/change-item-bg-4.jpg');
+    background-image: url('../img/change-item-bg-4.jpg');
     grid-area: d;
 }
 
 .changing__steps-list-item:nth-child(5) {
-    background-image: url('/img/change-item-bg-5.jpg');
+    background-image: url('../img/change-item-bg-5.jpg');
     grid-area: e;
 }
 
 .changing__steps-list-item:nth-child(6) {
-    background-image: url('/img/change-item-bg-6.jpg');
+    background-image: url('../img/change-item-bg-6.jpg');
     grid-area: f;
 }
 
 .changing__steps-list-item:nth-child(7) {
-    background-image: url('/img/change-item-bg-7.jpg');
+    background-image: url('../img/change-item-bg-7.jpg');
     grid-area: g;
 }
 
