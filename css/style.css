@@ -24,6 +24,8 @@
     margin: 0;
     font-family: var(--basic-font), sans-serif;
     color: var(--color-gray);
+    line-height: 1.2;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,15 +49,11 @@ li {
 .btn {
     border: none;
     background: none;
-    font-size: 16px;
     outline: none;
     /* Отключаем браузерные эффекты для кнопки (например, тень в Safari) */
     -webkit-appearance: none;
     appearance: none;
     padding: 14px 49px;
-    border-radius: 66px;
-    max-width: 263px;
-    width: 100%;
     cursor: pointer;
     transition-duration: 0.3s;
 }
@@ -76,6 +74,9 @@ li {
     color: var(--color-white);
     background-color: var(--color-dark);
     border: 2px solid var(--color-dark);
+    max-width: 263px;
+    width: 100%;
+    border-radius: 66px;
 }
 
 .accent-btn:hover {
@@ -88,6 +89,9 @@ li {
     color: var(--color-dark);
     background-color: transparent;
     border: 2px solid var(--color-dark);
+    max-width: 263px;
+    width: 100%;
+    border-radius: 66px;
 }
 
 .default-btn:hover {
@@ -95,6 +99,47 @@ li {
     background-color: var(--color-dark);
 }
 
+/* todo переименовать */
+.some-btn {
+    padding: 12px;
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-white);
+    border-radius: 62px;
+}
+
+.some-btn:hover {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+}
+
+
+.slider-btn {
+    border-radius: 50%;
+    background-color: var(--color-gray);
+    background-position: center;
+    background-image: url("/img/arrow.svg");
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+}
+
+.slider-btn:hover {
+    background-color: var(--color-yellow);
+}
+
+.slider-btn:disabled {
+    background-color: #D6D6D6;
+}
+
+.slider-btn--next {
+    transform: rotate(180deg)
+}
 
 /* ---------- header ----------- */
 .header {
@@ -173,6 +218,7 @@ li {
     font-family: inherit;
     color: var(--color-red);
     font-weight: bold;
+    font-size: 36px;
 }
 
 .about-competition {
@@ -204,6 +250,7 @@ li {
     font-family: inherit;
     color: var(--color-red);
     font-weight: bold;
+    font-size: 36px;
 }
 
 .about-competition__info {
@@ -216,7 +263,6 @@ li {
 .about-competition__info-text {
     font-size: 20px;
     padding: 15px 0;
-    line-height: 1.2;
     border-bottom: 2px solid var(--color-gray-light);
 }
 
@@ -243,6 +289,7 @@ li {
     position: relative;
     margin-right: 7px;
     display: inline-block;
+    font-size: 20px;
 }
 
 .about-competition__info-text--thrt::before {
@@ -258,7 +305,6 @@ li {
 .about-competition__comment {
     margin-top: 48px;
     color: var(--color-blue);
-    line-height: 1.2;
     font-size: 20px;
 }
 /* ---------- конец Секция Tурнир ----------- */
@@ -276,12 +322,10 @@ li {
 .changing__title-text {
     font-family: var(--accent-font), serif;
     font-size: 54px;
-    line-height: 1.2;
     text-transform: uppercase;
 }
 .changing__sub-title {
     font-size: 20px;
-    line-height: 1.2;
     color: var(--color-blue);
     position: absolute;
     max-width: 250px;
@@ -299,8 +343,8 @@ li {
                          "f g g";
     position: relative;
 }
-/* todo переделать разметку */
-.test {
+
+.changing__steps-list-img {
     position: absolute;
     bottom: 0;
     right: -50px;
@@ -367,13 +411,11 @@ li {
     width: 36px;
     height: 36px;
     font-size: 20px;
-    line-height: 1.2;
     font-weight: 700;
 }
 
 .steps-list__item__text {
     font-size: 20px;
-    line-height: 1.2;
     font-weight: 500;
 }
 
@@ -390,28 +432,56 @@ li {
     margin-bottom: 140px;
 }
 
+.gamers__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-btns-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.slider-count-wrap {
+    margin: 0 14px;
+}
+
+.slider-count-devider,
+#total-count {
+    opacity: .6;
+}
+
+/* todo скорее всего временно */
+.gamers__list {
+    display: flex;
+    margin-top: 60px;
+    column-gap: 20px;
+    overflow: hidden;
+}
+
 .gamers__card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 37px;
 }
 .gamers__header-title {
     font-family: var(--accent-font), serif;
     font-size: 54px;
-    line-height: 1.2;
     text-transform: uppercase;
 }
 
 .gamers__card-name {
     font-size: 24px;
     font-weight: 500;
-    line-height: 1.2;
+    margin-top: 28px;
 }
 
 .gamers__card-about {
     font-size: 20px;
-    line-height: 1.2;
     opacity: .6;
+    padding: 6px 0 20px;
 }
 
 /* ---------- конец Участники турнира ----------- */
