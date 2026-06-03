@@ -456,8 +456,6 @@ li {
 .gamers__list {
     display: flex;
     margin-top: 60px;
-    column-gap: 20px;
-    overflow: hidden;
 }
 
 .gamers__card {
@@ -466,6 +464,7 @@ li {
     align-items: center;
     padding: 0 37px;
 }
+
 .gamers__header-title {
     font-family: var(--accent-font), serif;
     font-size: 54px;
